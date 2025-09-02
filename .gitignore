@@ -19,6 +19,17 @@ capybara-*.html
 # Rails credentials
 /config/master.key
 /config/credentials/*.key
+# Environment variables
+.env
+.env.*
+!.env.example
+# Rails cache and temp files
+/public/uploads/*
+/public/assets/*
+/public/packs/*
+/public/packs-test/*
+rerun.txt
+pickle-email-*.html
 # Ignore node_modules (if using Webpacker/Vite)
 node_modules/
 
@@ -38,6 +49,10 @@ yarn-error.log*
 .pnpm-debug.log*
 .eslintcache
 .vscode/
+# Package lock files (keep only one)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # -------------------------
 # iOS / Swift
@@ -58,6 +73,20 @@ UserInterfaceState.xcuserstate
 *.ipa
 *.dSYM.zip
 *.dSYM
+# Swift Package Manager
+.swiftpm/
+*/.swiftpm/
+# CocoaPods
+ios/Pods/
+ios/Podfile.lock
+# Xcode workspace and project files
+*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+# Fastlane
+ios/fastlane/report.xml
+ios/fastlane/Preview.html
+ios/fastlane/screenshots/**/*.png
+ios/fastlane/test_output
 
 # -------------------------
 # Android / Kotlin
@@ -77,6 +106,16 @@ UserInterfaceState.xcuserstate
 /android/.cxx/
 android/local.properties
 android/app/build/
+# Additional Android patterns
+android/.gradle/
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/app/release/
+android/app/debug/
+android/app/src/main/assets/
+android/.idea/
+*.aab
 
 # -------------------------
 # macOS / OS cruft
@@ -95,3 +134,23 @@ Thumbs.db
 *~
 .project
 .settings/
+
+# -------------------------
+# Security & Secrets
+# -------------------------
+*.keystore
+*.jks
+*.p12
+*.key
+*.pem
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart
+*.mobileprovision
+
+# -------------------------
+# Database files
+# -------------------------
+*.db
+*.sqlite
+*.sqlite3
