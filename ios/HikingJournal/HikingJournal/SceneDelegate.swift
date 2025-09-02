@@ -10,6 +10,19 @@ import UIKit
 
 let baseURL = URL(filePath: "http://localhost:3000")!
 
-class SceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var window: UIWindow?
     
+    private let navigator = Navigator(configuration: .init(
+        name: "main",
+        startLocation: baseURL.appending(path: "hikes")
+    ))
+    
+    func scene(
+        _ scene: UIScene,
+        willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions) {
+            window?.rootViewController = navigator.rootViewController
+            navigator.start()
+    }
 }

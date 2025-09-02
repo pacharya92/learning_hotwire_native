@@ -52,6 +52,7 @@ ios/*.xcworkspace/xcuserdata/
 /ios/xcuserdata/
 /ios/*.moved-aside
 ios/*.xcuserstate
+UserInterfaceState.xcuserstate
 *.xccheckout
 *.hmap
 *.ipa
